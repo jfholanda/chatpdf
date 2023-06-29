@@ -1,10 +1,6 @@
 import streamlit as st
-import PyPDF2
-import langchain
 import pickle
 import os
-
-from dotenv import load_dotenv 
 
 from streamlit_extras.add_vertical_space import add_vertical_space
 
@@ -15,8 +11,6 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.llms import OpenAI 
 from langchain.chains.question_answering import load_qa_chain
-
-load_dotenv()
 
 # API Key da OpenAI
 os.environ["OPENAI_API_KEY"] = os.getenv("API_KEY")
